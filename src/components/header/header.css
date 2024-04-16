@@ -1,0 +1,10 @@
+.header {
+  background-color: #333;
+  text-align: center;
+}
+
+.logoImg {
+  width: 150px;
+  height: auto;
+  border: 2px solid rgb(0, 0, 0);
+}

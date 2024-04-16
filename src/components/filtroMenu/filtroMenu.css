@@ -1,0 +1,34 @@
+.seleccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 20 20px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  width: 80%;
+}
+.seleccion_link {
+  width: 100%;
+}
+.seleccion_btn {
+  width: 90%;
+  padding: 10px;
+  margin: 15px;
+  background-color: #c72147;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(24, 24, 24, 0.1);
+}
+
+.seleccion_btn:hover {
+  background-color: #8a1732;
+}
