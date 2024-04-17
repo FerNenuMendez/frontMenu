@@ -1,6 +1,7 @@
 import Header from '../../components/header/header.jsx'
 import Footer from '../../components/footer/footer.jsx'
 import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
+import PedidoCounter from '../../components/pedidoCounter/pedidoCounter.jsx'
 import img from '/public/bebida.jpg'
 import { useState, useEffect } from 'react';
 import './MenuBebidas.css';
@@ -53,6 +54,7 @@ const MenuBebidas = () => {
       <Header/>
       <div className='navegacion'>
         <BtnVolver />
+        <PedidoCounter/>
       </div>
       <section className='menu'>
         <h2 className='menu__h2'>Bebidas</h2>

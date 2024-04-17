@@ -1,7 +1,7 @@
 import Header from '../../components/header/header.jsx'
 import Footer from '../../components/footer/footer.jsx'
 import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
-import img from '/public/plato.jpg'
+import img from '/plato.jpg'
 import { useState, useEffect } from 'react';
 import './MenuPizzas.css'
 

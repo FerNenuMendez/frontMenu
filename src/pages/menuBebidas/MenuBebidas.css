@@ -32,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem;
+  margin: 2rem;
   padding: 1rem;
   text-align: center;
   font-size: large;
@@ -72,6 +72,10 @@
   background-color: brown;
   color: #fff;
   box-shadow: 4px 4px 4px grey;
+}
+.navegacion {
+  display: flex;
+  justify-content: space-between;
 }
 .volver {
   margin: 1rem;
