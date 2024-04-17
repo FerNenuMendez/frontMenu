@@ -1,8 +1,8 @@
 import Header from '../../components/header/header.jsx'
 import Footer from '../../components/footer/footer.jsx'
+import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
 import img from '/public/bebida.jpg'
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom"
 import './MenuBebidas.css';
 
 const MenuBebidas = () => {
@@ -51,11 +51,10 @@ const MenuBebidas = () => {
   return (
     <>
       <Header/>
-      
-      <section className='menu'>
       <div className='navegacion'>
-        <Link to="" ><button className='volver'>Volver</button></Link>
+        <BtnVolver />
       </div>
+      <section className='menu'>
         <h2 className='menu__h2'>Bebidas</h2>
         <div>
           {bebidas.map((bebida, index) => (

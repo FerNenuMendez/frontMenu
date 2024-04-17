@@ -1,8 +1,8 @@
 import Header from '../../components/header/header.jsx'
 import Footer from '../../components/footer/footer.jsx'
+import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
 import img from '/public/plato.jpg'
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom"
 import './MenuPizzas.css'
 
 const MenuPizzas = () => {
@@ -52,7 +52,7 @@ const MenuPizzas = () => {
     <>
       <Header/>
       <div className='navegacion'>
-        <Link to=""><button className='volver'>Volver</button></Link>
+        <BtnVolver/>
       </div>
       <section className='menu'>
         <h2 className='menu__h2'>Pizzas</h2>
