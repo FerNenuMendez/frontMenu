@@ -1,36 +1,23 @@
-import Header from '../../components/header/header.jsx'
-import Footer from '../../components/footer/footer.jsx'
-import FiltroMenu from '../../components/filtroMenu/filtroMenu.jsx';
-import { useState } from "react";
+import Header from '../../components/header/Header.jsx'
+import Footer from '../../components/footer/Footer.jsx'
+import { useContext } from "react";
+import { Link } from "react-router-dom"
+import { cartContext } from '../../context/cartProvider.jsx';
 import './Index.css';
 
 function Index() {
-  const [menu, setMenu] = useState(false);
-  const [name, setName] = useState('');
-  // eslint-disable-next-line no-unused-vars
-  const [mesa, setMesa] = useState(0);
-
+  //context pedido
+  const {infoMesa} = useContext(cartContext)
+  //funcion que muestra el menu y guarda info de la mesa
   function verMenu() {
     const nombre = document.getElementById('nombre').value;
     const mesaNum = parseInt(document.getElementById('mesa').value, 10);
-
-    setName(nombre);
-    setMesa(mesaNum);
-    setMenu(true);
+    infoMesa(nombre, mesaNum)
   }
 
   return (
     <>
       <Header/>
-      {menu ? (
-        <main id="main" className="main">
-          <section className="infoPedido">
-          <h1 className="h1">Hola {name}! </h1>
-          <h2 className="h2">Este es nuestro Menu:</h2>
-          <FiltroMenu/>
-          </section>
-        </main>
-      ) : (
         <main id="main" className="main">
           <section id="info" className="infoPedido">
             <h1 className="h1">Bienvenidos a Kansas</h1>
@@ -46,11 +33,10 @@ function Index() {
                   <input type="number" id="mesa" name="mesa" required />
                 </div>
               </form>
-              <button id="verMenuBtn" onClick={verMenu}>Ver Menu</button>
+              <Link to='/menu'><button id="verMenuBtn" onClick={verMenu}>Ver Menu</button></Link>
             </div>
           </section>
         </main>
-      )}
       <Footer/>
     </>
   );

@@ -3,9 +3,9 @@ import { TiArrowLeftThick } from "react-icons/ti";
 import './btnVolver.css'
 
 
-const btnVolver = (param) => {
+const btnVolver = () => {
   return (
-    <Link to={param} ><button className='volver'><TiArrowLeftThick /></button></Link>
+    <Link to={'/menu'} ><button className='volver'><TiArrowLeftThick /></button></Link>
   )
 }
 
