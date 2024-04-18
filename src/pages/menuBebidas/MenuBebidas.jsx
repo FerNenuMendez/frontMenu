@@ -1,8 +1,8 @@
 import Header from '../../components/header/header.jsx'
 import Footer from '../../components/footer/footer.jsx'
 import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
-import PedidoCounter from '../../components/pedidoCounter/pedidoCounter.jsx'
-import img from '/public/bebida.jpg'
+import PedidoCounter from '../../components/pedidoCounter/PedidoCounter.jsx'
+import img from '/bebida.jpg'
 import { useState, useEffect } from 'react';
 import './MenuBebidas.css';
 
