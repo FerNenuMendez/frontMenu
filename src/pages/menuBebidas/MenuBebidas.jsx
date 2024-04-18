@@ -1,14 +1,14 @@
-import Header from '../../components/header/header.jsx'
-import Footer from '../../components/footer/footer.jsx'
+import Header from '../../components/header/Header.jsx'
+import Footer from '../../components/footer/Footer.jsx'
 import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
 import PedidoCounter from '../../components/pedidoCounter/PedidoCounter.jsx'
 import img from '/bebida.jpg'
-import { useState, useEffect } from 'react';
+import { cartContext } from '../../context/cartProvider.jsx'
+import { useEffect, useContext} from 'react';
 import './MenuBebidas.css';
 
 const MenuBebidas = () => {
-  const [bebidas, setBebidas] = useState([]);
-  const [pedido, setPedido] = useState([]);
+  const {bebidas, setBebidas} = useContext(cartContext)
   const url = 'https://api-menu-six.vercel.app/api/bebidas/'; 
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const MenuBebidas = () => {
       precio,
       cantidad,
     };
-    setPedido([...pedido, nuevoPedido]);
+    setBebidas([...bebidas, nuevoPedido]);
   };
 
   const actualizarCantidad = (index, nuevaCantidad) => {

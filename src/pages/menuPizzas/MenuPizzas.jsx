@@ -1,5 +1,5 @@
-import Header from '../../components/header/header.jsx'
-import Footer from '../../components/footer/footer.jsx'
+import Header from '../../components/header/Header.jsx'
+import Footer from '../../components/footer/Footer.jsx'
 import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
 import img from '/plato.jpg'
 import { useState, useEffect } from 'react';

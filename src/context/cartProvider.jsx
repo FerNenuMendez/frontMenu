@@ -13,6 +13,12 @@ const CartProvider = ({ children }) => { // Desestructura props para obtener chi
     const [mesa, setMesa] = useState(0)
     //mostrar Menu
     const [menu, setMenu] = useState(false)
+    //pedido de bebidas
+    const [bedidas, setBebidas] = useState([])
+    //pedido de comidas
+    const [comidas, setComidas] = useState([])
+    //pedido de postres
+    const [postres, setPostres] = useState([])
 
     const infoMesa=(name, mesa)=>{
         setName(name)
@@ -35,7 +41,7 @@ const CartProvider = ({ children }) => { // Desestructura props para obtener chi
     }
 
     return (
-        <cartContext.Provider value={{ cart, name, mesa, menu, setName, setMesa, setMenu, addToCart, cleanCart, infoMesa }}>
+        <cartContext.Provider value={{ cart, name, mesa, menu, bedidas, comidas, postres, setName, setMesa, setMenu, addToCart, cleanCart, infoMesa, setBebidas, setComidas, setPostres }}>
             {children}
         </cartContext.Provider>
     )
