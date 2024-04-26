@@ -1,6 +1,6 @@
 import './header.css'
 
-const header = () => {
+const Header = () => {
   return (
     <header className="header">
       <img
@@ -12,4 +12,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header
