@@ -1,8 +1,6 @@
 import Index from './pages/index/Index.jsx'
 import Menu from './pages/menu/Menu.jsx'
-import MenuBebidas from './pages/menuBebidas/MenuBebidas.jsx'
-import MenuPizzas from './pages/menuPizzas/MenuPizzas.jsx'
-import MenuPostres from './pages/menuPostres/MenuPostres.jsx'
+import ItemListContainer from './components/itemListContainer/ItemListContainer.jsx' 
 import CartProvider from './context/cartProvider.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
@@ -16,9 +14,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Index/>}/>
             <Route path='/menu' element={<Menu/>}/>
-            <Route path='/menubebidas' element={<MenuBebidas/>}/>
-            <Route path='/menupizzas' element={<MenuPizzas/>}/>
-            <Route path='/menupostres' element={<MenuPostres/>}/>
+            <Route path='/categoria/:categoria' element={<ItemListContainer/>}/>
           </Routes>
         </BrowserRouter>
       </CartProvider>
