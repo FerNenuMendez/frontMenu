@@ -2,14 +2,20 @@ import Header from '../../components/header/Header.jsx'
 import Footer from '../../components/footer/Footer.jsx'
 import BtnVolver from '../../components/btnVolver/btnVolver.jsx'
 import PedidoCounter from '../../components/pedidoCounter/PedidoCounter.jsx'
+import BtnATC from '../../components/botonAddToCart/BtnATC.jsx'
 import img from '/bebida.jpg'
 import { useEffect, useState} from 'react';
 import './MenuBebidas.css';
 
 const MenuBebidas = () => {
   const [bebidas, setBebidas] = useState([])
+  // eslint-disable-next-line no-unused-vars
   const [pedido, setPedido] = useState([])
-  const url = 'https://api-menu-six.vercel.app/api/bebidas/'; 
+  // eslint-disable-next-line no-unused-vars
+  const [botoneraFinal, setBotoneraFinal] = useState(false)
+
+  const url = 'https://api-menu-six.vercel.app/api/bebidas/';
+
 
   useEffect(() => {
     const fetchBebidas = async () => {
@@ -33,20 +39,6 @@ const MenuBebidas = () => {
     fetchBebidas();
   }, [url]);
 
-  const agregarAlPedido = (nombre, precio, cantidad) => {
-    const nuevoPedido = {
-      nombre,
-      precio,
-      cantidad,
-    };
-    setPedido([...pedido, nuevoPedido]);
-  };
-
-  const actualizarCantidad = (index, nuevaCantidad) => {
-    const nuevasBebidas = [...bebidas];
-    nuevasBebidas[index].cantidad = nuevaCantidad;
-    setBebidas(nuevasBebidas);
-  };
 
   return (
     <>
@@ -56,31 +48,18 @@ const MenuBebidas = () => {
         <PedidoCounter/>
       </div>
       <section className='menu'>
-        <h2 className='menu__h2'>Bebidas</h2>
-         <div>
+        <h2 className='menu__h2'>bebidas</h2>
+        <div className='cardContainer'>
           {bebidas.map((bebida, index) => (
-             <div key={index} className="card">
-               <img src={img} alt={bebida.nombre} className='card__img' />
-               <h3 className='card__nombre'>{bebida.nombre}</h3>
-               <p className='card__detalle'>{bebida.detalle}</p>
-               <p className='card__precio'>${bebida.precio}</p>
-
-               <div className="agregar__pedido">
-                 <button className="cantidad__btn" onClick={() => actualizarCantidad(index, bebida.cantidad + 1)}>+</button>
-                 <input 
-                   type="number" 
-                   className="cantidad__input"
-                   value={bebida.cantidad} 
-                   min={1} 
-                   onChange={(e) => actualizarCantidad(index, parseInt(e.target.value, 10))} 
-                 />
-                 <button className="cantidad__btn" onClick={() => actualizarCantidad(index, Math.max(bebida.cantidad - 1, 1))}>-</button>
-               </div>
-
-               <button className="cantidad__btn" onClick={() => agregarAlPedido(bebida.nombre, bebida.precio, bebida.cantidad)}>Agregar al Pedido</button>
-             </div>
+            <div key={index} className="card">
+              <img src={img} alt={bebida.nombre} className='card__img' />
+              <p className='card__nombre_b'>{bebida.nombre}</p>
+              <p className='card__detalle_b'>{bebida.detalle}</p>
+              <p className='card__precio_b'>${bebida.precio}</p>
+              <BtnATC/>
+            </div>
           ))}
-        </div> 
+        </div>
       </section>
       <Footer/>
     </>

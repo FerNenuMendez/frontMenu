@@ -1,0 +1,46 @@
+.boton-suma-resta {
+  position: relative;
+}
+
+.boton-suma-resta__boton {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.boton-suma-resta__menu {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.boton-suma-resta__menu-btn {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.boton-suma-resta__menu-input {
+  width: 50px;
+  margin: 0 10px;
+  text-align: center;
+}
