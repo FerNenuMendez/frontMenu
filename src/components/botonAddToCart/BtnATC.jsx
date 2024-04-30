@@ -1,22 +1,23 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import './BtnATC.css'
 
-const BtnATC = () => {
-  const [cantidad, setCantidad] = useState(1); // Estado para almacenar la cantidad
-  const [mostrarMenu, setMostrarMenu] = useState(false); // Estado para mostrar/ocultar el menú
+const BtnATC = ({count, setCount}) => {
+  const [mostrarMenu, setMostrarMenu] = useState(false); 
   
 
-  const restarCantidad = () => {
-    if (cantidad > 1) {
-      setCantidad(cantidad - 1);
-    } else if (cantidad === 1) { // Verificar si la cantidad es 1
-      setMostrarMenu(false); // Establecer mostrarMenu en false si la cantidad es 1
+  const restarCount = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    } else if (count === 1) { 
+      setMostrarMenu(false); 
     }
   };
 
-  const sumarCantidad = () => {
-    setCantidad(cantidad + 1);
-    if(cantidad>0){
+  const sumarCount = () => {
+    setCount(count + 1);
+    if(count>0){
       //boton finalizar pedido true
     }
   };
@@ -31,17 +32,17 @@ const BtnATC = () => {
       {
         mostrarMenu ? (
           <div className="boton-suma-resta__menu">
-            <button className="boton-suma-resta__menu-btn" onClick={restarCantidad}>
+            <button className="boton-suma-resta__menu-btn" onClick={restarCount}>
               -
             </button>
             <input
               type="number"
-              value={cantidad}
-              onChange={(e) => setCantidad(parseInt(e.target.value))}
+              value={count}
+              onChange={(e) => setCount(parseInt(e.target.value))}
               min={1}
               className="boton-suma-resta__menu-input"
             />
-            <button className="boton-suma-resta__menu-btn" onClick={sumarCantidad}>
+            <button className="boton-suma-resta__menu-btn" onClick={sumarCount}>
               +
             </button>
           </div>

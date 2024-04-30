@@ -1,22 +1,26 @@
+/* eslint-disable no-unused-vars */
 import BtnATC from '../../components/botonAddToCart/BtnATC.jsx'
-import img from '/bebida.jpg'
+import {useState} from 'react'
 import './CardComponent.css'
 
 
-const cardComponent = (bebidas) => {
+const CardComponent = (items) => {
+  console.log(items.items)
+  const [count, setCount] = useState(1)
+  
   return (
     <div className='cardContainer'>
-          {bebidas.map((bebida, index) => (
+          {items.items.map((item, index) => (
             <div key={index} className="card">
-              <img src={img} alt={bebida.nombre} className='card__img' />
-              <p className='card__nombre_b'>{bebida.nombre}</p>
-              <p className='card__detalle_b'>{bebida.detalle}</p>
-              <p className='card__precio_b'>${bebida.precio}</p>
-              <BtnATC/>
+              <img src={item.img} alt={item.nombre} className='card__img' />
+              <p className='card__nombre_b'>{item.nombre}</p>
+              <p className='card__detalle_b'>{item.detalle}</p>
+              <p className='card__precio_b'>${item.precio}</p>
+              <BtnATC count={count} setCount={setCount}/>
             </div>
-          ))}
-        </div>
+          ))} 
+    </div>
   )
 }
 
-export default cardComponent
+export default CardComponent
