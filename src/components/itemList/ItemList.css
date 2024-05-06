@@ -1,0 +1,8 @@
+.itemList {
+  margin-bottom: 6rem;
+}
+.itemList__botonera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

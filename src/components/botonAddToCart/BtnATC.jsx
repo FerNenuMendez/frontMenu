@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import './BtnATC.css'
 
-const BtnATC = ({count, setCount}) => {
+const BtnATC = ({count, setCount, addToCart}) => {
+
   const [mostrarMenu, setMostrarMenu] = useState(false); 
   
-
   const restarCount = () => {
     if (count > 1) {
       setCount(count - 1);
@@ -26,25 +26,31 @@ const BtnATC = ({count, setCount}) => {
     setMostrarMenu(!mostrarMenu);
   };
 
-
   return (
     <div className="boton-suma-resta">
       {
         mostrarMenu ? (
-          <div className="boton-suma-resta__menu">
-            <button className="boton-suma-resta__menu-btn" onClick={restarCount}>
-              -
-            </button>
-            <input
-              type="number"
-              value={count}
-              onChange={(e) => setCount(parseInt(e.target.value))}
-              min={1}
-              className="boton-suma-resta__menu-input"
-            />
-            <button className="boton-suma-resta__menu-btn" onClick={sumarCount}>
-              +
-            </button>
+          <div className="boton-suma-resta__container">
+            <div className="boton-suma-resta__menu">
+              <button className="boton-suma-resta__menu-btn" onClick={restarCount}>
+                -
+              </button>
+              <input
+                type="number"
+                value={count}
+                onChange={(e) => setCount(parseInt(e.target.value))}
+                min={1}
+                className="boton-suma-resta__menu-input"
+              />
+              <button className="boton-suma-resta__menu-btn" onClick={sumarCount}>
+                +
+              </button>
+            </div>
+            <div>
+              <button className="boton-suma-resta__menu-btn" onClick={addToCart}>
+                Agregar al pedido
+              </button>
+            </div>
           </div>
         ):(
           <button className="boton-suma-resta__boton" onClick={toggleMenu}>

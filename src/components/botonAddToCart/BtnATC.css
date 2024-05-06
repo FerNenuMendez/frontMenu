@@ -1,6 +1,21 @@
 .boton-suma-resta {
   position: relative;
 }
+.boton-suma-resta__container {
+  background-color: #f9f9f9;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton-suma-resta__menu {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
 
 .boton-suma-resta__boton {
   background-color: brown;
@@ -14,15 +29,6 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 50%;
-}
-
-.boton-suma-resta__menu {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
 }
 
 .boton-suma-resta__menu-btn {

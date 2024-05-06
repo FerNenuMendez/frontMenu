@@ -2,7 +2,7 @@ import {useContext, useState} from 'react'
 import {cartContext} from '../../context/cartProvider.jsx'
 import { Link } from "react-router-dom"
 import { TiShoppingCart} from "react-icons/ti";
-import './PedidoCounter.css'
+import "./pedidoCounter.css"
 
 const PedidoCounter = () => {
   const {cart} = useContext(cartContext)

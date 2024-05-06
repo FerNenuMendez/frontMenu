@@ -5,18 +5,23 @@ import { createContext, useState } from 'react';
 export const cartContext = createContext([])
 
 // eslint-disable-next-line react/prop-types
-const CartProvider = ({ children }) => { // Desestructura props para obtener children
+const CartProvider = ({ children }) => { 
     //Pedido
     const [cart, setCart] = useState([])
+   
     //info Mesa
     const [name, setName] = useState('')
     const [mesa, setMesa] = useState(0)
+    
     //mostrar Menu
     const [menu, setMenu] = useState(false)
+    
     //pedido de bebidas
     const [bedidasPedidas, setBebidasPedidas] = useState([])
+    
     //pedido de comidas
     const [comidasPedidas, setComidasPedidas] = useState([])
+    
     //pedido de postres
     const [postresPedidos, setPostresPedidos] = useState([])
 
@@ -31,17 +36,10 @@ const CartProvider = ({ children }) => { // Desestructura props para obtener chi
         setCart([])
     }
 
-    const addToCart = (product, quantity) => {
-        setCart([...cart, { product, quantity }])
-        // swal({
-        //     title: "El producto se agrego al carrito",
-        //     icon: "success",
-        //     button: "Ok",
-        //     })
-    }
+    
 
     return (
-        <cartContext.Provider value={{ cart, name, mesa, menu, bedidasPedidas, comidasPedidas, postresPedidos, setName, setMesa, setMenu, addToCart, cleanCart, infoMesa, setBebidasPedidas, setComidasPedidas, setPostresPedidos }}>
+        <cartContext.Provider value={{ cart, name, mesa, menu, bedidasPedidas, comidasPedidas, postresPedidos, setName, setMesa, setMenu, cleanCart, infoMesa, setBebidasPedidas, setComidasPedidas, setPostresPedidos }}>
             {children}
         </cartContext.Provider>
     )
