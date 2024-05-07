@@ -32,6 +32,11 @@ const CartProvider = ({ children }) => {
         console.log(name,mesa)
     }
 
+    const addToCart = (product, quantity)=>{
+        setCart([ ...cart,{product, quantity} ])
+        console.log(cart)
+    }
+
     const cleanCart = () => {
         setCart([])
     }
@@ -39,7 +44,7 @@ const CartProvider = ({ children }) => {
     
 
     return (
-        <cartContext.Provider value={{ cart, name, mesa, menu, bedidasPedidas, comidasPedidas, postresPedidos, setName, setMesa, setMenu, cleanCart, infoMesa, setBebidasPedidas, setComidasPedidas, setPostresPedidos }}>
+        <cartContext.Provider value={{ cart, name, mesa, menu, bedidasPedidas, comidasPedidas, postresPedidos, setName, setMesa, setMenu, cleanCart, infoMesa, setBebidasPedidas, setComidasPedidas, setPostresPedidos, addToCart }}>
             {children}
         </cartContext.Provider>
     )

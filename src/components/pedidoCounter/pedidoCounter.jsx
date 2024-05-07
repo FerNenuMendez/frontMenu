@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react'
+import {useContext, useState, useEffect} from 'react'
 import {cartContext} from '../../context/cartProvider.jsx'
 import { Link } from "react-router-dom"
 import { TiShoppingCart} from "react-icons/ti";
@@ -7,8 +7,19 @@ import "./pedidoCounter.css"
 const PedidoCounter = () => {
   const {cart} = useContext(cartContext)
   // eslint-disable-next-line no-unused-vars
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   
+  useEffect(()=>{
+    try{
+      if(cart.length===0){
+        setVisible(false)
+      }else{
+        setVisible(true)
+      }
+    } catch (error) {
+      console.error('Error data:', error);
+    }
+  }, [cart])
   
   return (
     visible ? (

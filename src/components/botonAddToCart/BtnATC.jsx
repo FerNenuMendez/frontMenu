@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import './BtnATC.css'
 
-const BtnATC = ({count, setCount, addToCart}) => {
+const BtnATC = ({count, setCount, addToCart, item}) => {
 
   const [mostrarMenu, setMostrarMenu] = useState(false); 
   
@@ -47,9 +47,9 @@ const BtnATC = ({count, setCount, addToCart}) => {
               </button>
             </div>
             <div>
-              {/* <button className="boton-suma-resta__menu-btn" onClick={addToCart}>
-                Agregar al pedido
-              </button> */}
+              <button className="boton-suma-resta__menu-btn" onClick={()=>addToCart(item, count)}>
+                Agregar al Pedido
+              </button>
             </div>
           </div>
         ):(

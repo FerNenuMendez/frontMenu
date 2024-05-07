@@ -3,12 +3,13 @@
 import BtnATC from '../botonAddToCart/BtnATC.jsx'
 import BtnVolver from '../btnVolver/btnVolver.jsx'
 import PedidoCount from '../pedidoCounter/pedidoCounter.jsx'
+import { cartContext } from '../../context/cartProvider.jsx'
 import { useState, useContext, useEffect } from 'react'
 import './ItemDetail.css'
 
 
 const ItemDetail = ({categoria, id}) => {
-
+  const {addToCart}=useContext(cartContext)
   const [count, setCount]= useState(1)
   const [item, setItem] = useState([])
   const url = `https://api-menu-six.vercel.app/api/categoria/${categoria}/id/${id}`
@@ -44,7 +45,7 @@ const ItemDetail = ({categoria, id}) => {
         <img src={item.img} alt={item.nombre} className='item__img' />
         <h3 className='item__detalle'>{item.detalle}</h3>
         <h3 className='item__precio'>${item.precio}</h3>
-        <BtnATC count={count} setCount={setCount}/>
+        <BtnATC count={count} setCount={setCount} addToCart={addToCart} item={item}/>
       </div>
     </>
   )
