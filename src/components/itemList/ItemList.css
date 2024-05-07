@@ -1,5 +1,6 @@
 .itemList {
   margin-bottom: 6rem;
+  text-align: center;
 }
 .itemList__botonera {
   display: flex;

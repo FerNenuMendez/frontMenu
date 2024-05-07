@@ -18,8 +18,10 @@
   margin-bottom: 15px;
 }
 .card__nombre {
-  font-size: xx-large;
-  font-weight: 600;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
   margin-bottom: 10px;
 }
 .card__detalle {

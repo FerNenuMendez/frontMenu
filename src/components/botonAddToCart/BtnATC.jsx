@@ -47,9 +47,9 @@ const BtnATC = ({count, setCount, addToCart}) => {
               </button>
             </div>
             <div>
-              <button className="boton-suma-resta__menu-btn" onClick={addToCart}>
+              {/* <button className="boton-suma-resta__menu-btn" onClick={addToCart}>
                 Agregar al pedido
-              </button>
+              </button> */}
             </div>
           </div>
         ):(

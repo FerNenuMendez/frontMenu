@@ -1,0 +1,41 @@
+.item__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: large;
+  /* border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px grey; */
+}
+.item__h2 {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+.item__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5%;
+  margin-bottom: 15px;
+}
+.item__detalle {
+  font-size: larger;
+  margin-bottom: 10px;
+}
+.item__precio {
+  font-size: larger;
+  font-weight: 600;
+  margin: 10px;
+  margin-bottom: 3rem;
+}
+.item__botonera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

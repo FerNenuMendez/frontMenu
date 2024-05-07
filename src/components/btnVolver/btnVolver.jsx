@@ -3,7 +3,8 @@ import { TiArrowLeftThick } from "react-icons/ti";
 import './btnVolver.css'
 
 
-const btnVolver = () => {
+// eslint-disable-next-line no-unused-vars
+const btnVolver = ({param}) => {
   return (
     <Link to={'/menu'} ><button className='volver'><TiArrowLeftThick /></button></Link>
   )
