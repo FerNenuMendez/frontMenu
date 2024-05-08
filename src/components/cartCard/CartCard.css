@@ -1,0 +1,28 @@
+/* .section__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: large;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px grey;
+}
+.itemCart__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cartCard__img {
+  width: 80%;
+}

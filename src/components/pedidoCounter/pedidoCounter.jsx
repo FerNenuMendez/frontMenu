@@ -23,10 +23,10 @@ const PedidoCounter = () => {
   
   return (
     visible ? (
-      <Link to="" className="link"><button className='volver2'><TiShoppingCart /><p className='volver__p'>{cart.length}</p></button></Link>
+      <Link to="/cart" className="link"><button className='volver2'><TiShoppingCart /><p className='volver__p'>{cart.length}</p></button></Link>
     ):(
     <div>
-      <Link to="" className="link"><button className='volver2'><TiShoppingCart /></button></Link>
+      <Link to="/cart" className="link"><button className='volver2'><TiShoppingCart /></button></Link>
     </div>    
     )
   )

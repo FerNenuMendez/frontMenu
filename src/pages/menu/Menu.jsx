@@ -17,6 +17,7 @@ const Menu = () => {
           <FiltroMenu/>
           </section>
       </main>
+      {/* ACA IRIA EL BOTON DE FINALIZAR PEDIDO QUE SALE CUANDO EL CART.LENGTH ES MAYOR A 0 */}
       <Footer/>
     </>
   )

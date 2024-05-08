@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import Footer from '../footer/Footer.jsx'
 import BtnATC from '../botonAddToCart/BtnATC.jsx'
 import BtnVolver from '../btnVolver/btnVolver.jsx'
 import PedidoCount from '../pedidoCounter/pedidoCounter.jsx'
@@ -24,7 +25,6 @@ const ItemDetail = ({categoria, id}) => {
             }
             const data = await response.json();
             const db = data.payload;
-            console.log(db)
             setItem(db);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -46,6 +46,7 @@ const ItemDetail = ({categoria, id}) => {
         <h3 className='item__detalle'>{item.detalle}</h3>
         <h3 className='item__precio'>${item.precio}</h3>
         <BtnATC count={count} setCount={setCount} addToCart={addToCart} item={item}/>
+        <Footer/>
       </div>
     </>
   )

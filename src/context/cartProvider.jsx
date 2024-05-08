@@ -34,7 +34,6 @@ const CartProvider = ({ children }) => {
 
     const addToCart = (product, quantity)=>{
         setCart([ ...cart,{product, quantity} ])
-        console.log(cart)
     }
 
     const cleanCart = () => {

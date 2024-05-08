@@ -1,4 +1,5 @@
 .volver2 {
+  position: relative;
   margin: 1rem;
   padding: 1.5rem;
   border: 2px solid rgb(0, 0, 0);
@@ -8,4 +9,16 @@
   background-color: brown;
   color: #fff;
   box-shadow: 4px 4px 4px grey;
+}
+
+.volver__p {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  margin: 2px;
+  padding: 5px;
+  font-size: large;
+  font-weight: 600;
+  color: white;
 }

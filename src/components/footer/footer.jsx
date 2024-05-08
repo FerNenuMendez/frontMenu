@@ -2,7 +2,9 @@ import './footer.css'
 
 const Footer = () => {
   return (
-    <div className='footer'>footer</div>
+    <div className='footer'>
+      <p className='footer__p1'>KANSAS</p>
+    </div>
   )
 }
 
