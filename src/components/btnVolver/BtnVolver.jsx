@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { TiArrowLeftThick } from "react-icons/ti";
-import './btnVolver.css'
+import './BtnVolver.css'
 
 
 // eslint-disable-next-line no-unused-vars
