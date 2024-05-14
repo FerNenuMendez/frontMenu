@@ -1,6 +1,6 @@
 import Header from '../../components/header/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx'
-import FiltroMenu from '../../components/filtroMenu/filtroMenu.jsx';
+import FiltroMenu from '../../components/filtroMenu/FiltroMenu.jsx';
 import { cartContext } from '../../context/cartProvider.jsx';
 import { useContext } from "react";
 import './Menu.css'
