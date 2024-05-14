@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 import Footer from '../footer/Footer.jsx'
 import BtnATC from '../botonAddToCart/BtnATC.jsx'
-import BtnVolver from '../btnVolver/btnVolver.jsx'
-import PedidoCount from '../pedidoCounter/pedidoCounter.jsx'
+import BtnVolver from '../btnVolver/BtnVolver.jsx'
+import PedidoCount from '../pedidoCounter/PedidoCounter.jsx'
 import { cartContext } from '../../context/cartProvider.jsx'
 import { useState, useContext, useEffect } from 'react'
 import './ItemDetail.css'
