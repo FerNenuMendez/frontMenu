@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import Header from '../header/Header.jsx'
 import Footer from '../footer/Footer.jsx'
-import PedidoCount from '../pedidoCounter/pedidoCounter.jsx'
+import PedidoCount from '../pedidoCounter/PedidoCounter.jsx'
 import CardComponent from '../cardComponent/CardComponent.jsx'
-import BtnVolver from '../btnVolver/btnVolver.jsx'
+import BtnVolver from '../btnVolver/BtnVolver.jsx'
 import './ItemList.css'
 
 // eslint-disable-next-line react/prop-types
