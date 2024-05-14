@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import './filtroMenu.css'
+import './FiltroMenu.css'
 
 const filtroMenu = () => {
   return (
